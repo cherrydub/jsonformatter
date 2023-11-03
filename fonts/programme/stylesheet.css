@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Programme';
+    src: url('Programme-BoldIta.eot');
+    src: local('Programme Bold Italic'), local('Programme-BoldIta'),
+        url('Programme-BoldIta.eot?#iefix') format('embedded-opentype'),
+        url('Programme-BoldIta.woff2') format('woff2'),
+        url('Programme-BoldIta.woff') format('woff'),
+        url('Programme-BoldIta.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Programme Light Rotated';
+    src: url('Programme-LightRot.eot');
+    src: local('Programme Light Rotated'), local('Programme-LightRot'),
+        url('Programme-LightRot.eot?#iefix') format('embedded-opentype'),
+        url('Programme-LightRot.woff2') format('woff2'),
+        url('Programme-LightRot.woff') format('woff'),
+        url('Programme-LightRot.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Programme Bold Rotated';
+    src: url('Programme-BoldRot.eot');
+    src: local('Programme Bold Rotated'), local('Programme-BoldRot'),
+        url('Programme-BoldRot.eot?#iefix') format('embedded-opentype'),
+        url('Programme-BoldRot.woff2') format('woff2'),
+        url('Programme-BoldRot.woff') format('woff'),
+        url('Programme-BoldRot.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Programme';
+    src: url('Programme-LightIta.eot');
+    src: local('Programme Light Italic'), local('Programme-LightIta'),
+        url('Programme-LightIta.eot?#iefix') format('embedded-opentype'),
+        url('Programme-LightIta.woff2') format('woff2'),
+        url('Programme-LightIta.woff') format('woff'),
+        url('Programme-LightIta.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Programme Primitiv';
+    src: url('Programme-Primitiv.eot');
+    src: local('Programme Primitiv'), local('Programme-Primitiv'),
+        url('Programme-Primitiv.eot?#iefix') format('embedded-opentype'),
+        url('Programme-Primitiv.woff2') format('woff2'),
+        url('Programme-Primitiv.woff') format('woff'),
+        url('Programme-Primitiv.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Programme';
+    src: url('Programme-Light.eot');
+    src: local('Programme Light'), local('Programme-Light'),
+        url('Programme-Light.eot?#iefix') format('embedded-opentype'),
+        url('Programme-Light.woff2') format('woff2'),
+        url('Programme-Light.woff') format('woff'),
+        url('Programme-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Programme';
+    src: url('Programme-Bold.eot');
+    src: local('Programme Bold'), local('Programme-Bold'),
+        url('Programme-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Programme-Bold.woff2') format('woff2'),
+        url('Programme-Bold.woff') format('woff'),
+        url('Programme-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Programme';
+    src: url('Programme-Regular.eot');
+    src: local('Programme'), local('Programme-Regular'),
+        url('Programme-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Programme-Regular.woff2') format('woff2'),
+        url('Programme-Regular.woff') format('woff'),
+        url('Programme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Programme';
+    src: url('Programme-RegularIta.eot');
+    src: local('Programme Regular Italic'), local('Programme-RegularIta'),
+        url('Programme-RegularIta.eot?#iefix') format('embedded-opentype'),
+        url('Programme-RegularIta.woff2') format('woff2'),
+        url('Programme-RegularIta.woff') format('woff'),
+        url('Programme-RegularIta.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Programme Rotated';
+    src: url('Programme-RegularRot.eot');
+    src: local('Programme Regular Rotated'), local('Programme-RegularRot'),
+        url('Programme-RegularRot.eot?#iefix') format('embedded-opentype'),
+        url('Programme-RegularRot.woff2') format('woff2'),
+        url('Programme-RegularRot.woff') format('woff'),
+        url('Programme-RegularRot.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+

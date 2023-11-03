@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.spinning-logo {
+  will-change: filter;
+  transition: filter 300ms;
+  height: 50px;
+}
+.spinning-logo:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spinning-logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+  @media (width < 600px) {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+}
+
+.app {
+  width: 500px;
+  @media (width < 600px) {
+    width: 90vw;
+  }
+}

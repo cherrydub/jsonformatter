@@ -58,7 +58,7 @@
 
 .footer {
   z-index: 100;
-  background-color: var(--main-background);
+
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
   /* height: 25px; */
   font-size: 20px;

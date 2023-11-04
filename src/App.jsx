@@ -17,9 +17,9 @@ function App() {
         <Toaster richColors />
         <Header />
         <Input />
-        {true && <Output />}
-        {/* <Info />
-        <Clickable /> */}
+        {parsedJson.value && <Output />}
+        {/* <Info /> */}
+        {/* <Clickable /> */}
 
         {/* <Footer /> */}
       </div>

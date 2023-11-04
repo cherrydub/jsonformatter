@@ -23,9 +23,6 @@
 
 * {
   color: rgba(255, 255, 255, 0.87);
-  /* @media (width <= 500px) {
-    font-size: 98%;
-  } */
 }
 
 html {
@@ -36,8 +33,7 @@ html {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  /* min-width: 320px; */
+  /* place-items: center; */
   min-height: 100vh;
 }
 
@@ -56,6 +52,7 @@ input {
   font-family: inherit;
   background: var(--input-background);
   transition: 0.25s;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 input::placeholder {
@@ -72,6 +69,7 @@ button {
   background: var(--button-background);
   cursor: pointer;
   transition: 0.5s;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 button:active {
@@ -82,7 +80,6 @@ button:hover {
   border: 1px solid var(--primary-text);
   background-color: var(--primary-text);
   color: var(--main-background);
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 button:hover .las {
@@ -101,6 +98,7 @@ textarea {
   border: none;
   padding: 10px;
   height: 200px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 textarea::placeholder {

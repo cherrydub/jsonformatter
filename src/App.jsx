@@ -5,22 +5,22 @@ import Output from "./components/Output";
 import Header from "./components/Header";
 
 import { inputUrl, inputJson, formattedJson } from "./signals";
+import Footer from "./components/Footer";
+import Info from "./components/Info";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <br />
-      <br />
-
-      {/* <Instructions /> */}
-
+      Input
       <Input />
-
       <br />
-      {formattedJson.value && <Output />}
-
-      <div></div>
+      Output
+      {true && <Output />}
+      <br />
+      <br />
+      <Info />
+      <Footer />
     </div>
   );
 }

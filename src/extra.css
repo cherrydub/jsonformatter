@@ -22,7 +22,7 @@
 }
 
 button {
-  font-size: 0.7rem;
+  /* font-size: 0.7rem; */
 }
 
 .buttons-1 {
@@ -37,18 +37,17 @@ button {
 
 .collapse-button {
   /* display: none; */
-  font-size: 10px;
-  margin-left: -27px;
+  /* font-size: 10px; */
+  /* margin-left: -27px; */
   /* background-color: red; */
-  position: relative;
+  /* position: relative; */
   color: black;
-  /* outline: 1px solid black; */
-
-  /* left: -20px; */
+  width: 10px;
+  padding: 0 5px;
   /* border: 1px solid black; */
-  /* background-color: yellow; */
-  /* position: relative;
-  left: -20px; */
+}
+
+.collapse-button button {
 }
 
 .collapse-button:hover {
@@ -62,7 +61,7 @@ button {
   cursor: default !important;
   outline: none;
 
-  color: transparent;
+  color: black;
 }
 
 .white-background:hover {
@@ -73,7 +72,7 @@ button {
   padding: 0px;
   /* border: 1px solid black; */
   /* border-radius: 5px; */
-  line-height: 0.9em;
+  line-height: 0.8rem;
   color: black;
 }
 
@@ -93,7 +92,7 @@ button {
 
 .clickable_keys:hover .value {
   display: inline !important;
-  font-size: 0.7rem !important;
+  /* font-size: 0.7rem !important; */
   font-weight: none !important;
 }
 

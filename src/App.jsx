@@ -18,8 +18,8 @@ function App() {
         <Header />
         <Input />
         {true && <Output />}
-        <Info />
-        <Clickable />
+        {/* <Info />
+        <Clickable /> */}
 
         {/* <Footer /> */}
       </div>

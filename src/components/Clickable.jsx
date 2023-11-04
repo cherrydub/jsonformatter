@@ -197,10 +197,12 @@ export default function Clickable({
           >
             <div style={{ whiteSpace: "nowrap" }} className="">
               <button
-                style={{
-                  // marginLeft: "-2.3rem",
-                  border: "none",
-                }}
+                style={
+                  {
+                    // marginLeft: "-2.3rem",
+                    // border: "none",
+                  }
+                }
                 className={`collapse-button ${
                   typeof obj[key] !== "object" ? "white-background" : ""
                 }`}

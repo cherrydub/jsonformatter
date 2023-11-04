@@ -21,19 +21,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
-* {
-  /* color: rgba(255, 255, 255, 0.87); */
-}
-
 html {
   background-color: var(--main-background);
   scroll-behavior: smooth;
 }
 
 body {
-  /* margin: 0; */
   display: flex;
-  /* place-items: center; */
+
   min-height: 100vh;
 }
 
@@ -59,6 +54,10 @@ input::placeholder {
   color: var(--primary-text);
 }
 
+button:active {
+  box-shadow: none;
+}
+
 button {
   /* border-radius: 8px; */
   border: 1px solid transparent;
@@ -70,10 +69,6 @@ button {
   cursor: pointer;
   transition: 0.5s;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-button:active {
-  box-shadow: none;
 }
 
 button:hover {

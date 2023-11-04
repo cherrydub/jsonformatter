@@ -91,6 +91,7 @@ export default function Clickable({
 
     return (
       <ul
+        className=""
         style={{
           listStyleType: "none",
           // , marginLeft: "-15px"
@@ -105,7 +106,7 @@ export default function Clickable({
               fontSize: "1rem",
             }}
           >
-            <div style={{ whiteSpace: "nowrap" }}>
+            <div style={{ whiteSpace: "nowrap" }} className="">
               <button
                 style={{}}
                 className={`collapse-button ${
@@ -174,9 +175,16 @@ export default function Clickable({
     const backgroundColor = colorArr[(depth - 1) % colorArr.length];
 
     return (
-      <ul style={{ listStyleType: "none", marginLeft: "-15px" }}>
+      <ul
+        className=""
+        style={{
+          listStyleType: "none",
+          // , marginLeft: "-15px"
+        }}
+      >
         {Object.keys(obj).map((key, index) => (
           <li
+            className=""
             title="Click to copy path"
             key={key + index}
             style={{
@@ -187,7 +195,7 @@ export default function Clickable({
                 : backgroundColor, // Make collapsed keys transparent
             }}
           >
-            <div style={{ whiteSpace: "nowrap" }}>
+            <div style={{ whiteSpace: "nowrap" }} className="">
               <button
                 style={{ marginLeft: "-20px" }}
                 className={`collapse-button ${

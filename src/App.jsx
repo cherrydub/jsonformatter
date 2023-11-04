@@ -19,10 +19,10 @@ function App() {
         <Input />
         {true && <Output />}
         <Info />
+        <Clickable />
 
         {/* <Footer /> */}
       </div>
-      <Clickable />
     </>
   );
 }

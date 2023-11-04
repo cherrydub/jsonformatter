@@ -91,10 +91,10 @@ export default function Clickable({
 
     return (
       <ul
-        className=""
+        className="clickable-list"
         style={{
           listStyleType: "none",
-          // , marginLeft: "-15px"
+          // marginLeft: "-15px",
         }}
       >
         {Object.keys(obj).map((key, index) => (
@@ -179,7 +179,7 @@ export default function Clickable({
         className=""
         style={{
           listStyleType: "none",
-          // , marginLeft: "-15px"
+          // marginLeft: "-15px",
         }}
       >
         {Object.keys(obj).map((key, index) => (
@@ -197,7 +197,10 @@ export default function Clickable({
           >
             <div style={{ whiteSpace: "nowrap" }} className="">
               <button
-                style={{ marginLeft: "-20px" }}
+                style={{
+                  // marginLeft: "-2.3rem",
+                  border: "none",
+                }}
                 className={`collapse-button ${
                   typeof obj[key] !== "object" ? "white-background" : ""
                 }`}
@@ -349,7 +352,6 @@ export default function Clickable({
                 overflowY: "auto",
                 overflowX: "auto",
                 // position: "relative",
-                backgroundColor: "gray",
               }}
             >
               <button

@@ -9,11 +9,16 @@
 
 .output-divs {
   text-align: left;
-  background-color: var(--output-divs-background);
+  background-color: black;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 1px dotted var(--output-divs-border);
-  border-radius: 5px;
+  box-shadow: none;
+  /* border: 1px dotted black; */
+  /* border-radius: 5px; */
+}
+
+.output-divs button {
+  box-shadow: none;
 }
 
 button {
@@ -21,7 +26,7 @@ button {
 }
 
 .buttons-1 {
-  display: flex;
+  /* display: flex; */
   /* padding-left: 10px; */
 }
 
@@ -31,19 +36,32 @@ button {
 }
 
 .collapse-button {
-  border: 1px solid transparent;
+  /* display: none; */
+  font-size: 10px;
+  margin-left: -27px;
+  /* background-color: red; */
+  position: relative;
+  color: black;
+  /* outline: 1px solid black; */
+
+  /* left: -20px; */
+  /* border: 1px solid black; */
+  /* background-color: yellow; */
+  /* position: relative;
+  left: -20px; */
 }
 
 .collapse-button:hover {
-  border: 1px solid black;
-  cursor: pointer;
-  font-weight: bold;
+  /* border: 1px solid black; */
+  cursor: crosshair;
+  /* font-weight: bold; */
 }
 
 .white-background {
   background-color: transparent;
   cursor: default !important;
-  border: 1px solid transparent !important;
+  outline: none;
+
   color: transparent;
 }
 
@@ -53,16 +71,17 @@ button {
 
 .clickable_keys {
   padding: 0px;
-  border: 1px dotted black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
   line-height: 0.9em;
+  color: black;
 }
 
 .clickable_keys:hover {
   color: black;
   cursor: pointer;
-  background-color: white !important;
-  border: 1px dotted black;
+  /* background-color: white !important; */
+  /* border: 1px dotted black; */
   transition: 0.5s;
 }
 
@@ -84,9 +103,9 @@ button {
   max-width: 85vw;
 }
 
-button:hover {
+/* button:hover {
   cursor: pointer;
-}
+} */
 
 #pre-path-area:hover {
   cursor: pointer;
@@ -102,4 +121,18 @@ button:hover {
   100% {
     color: white;
   }
+}
+
+ul {
+  /* margin-left: 20px; */
+  margin-left: 0;
+}
+
+li {
+  line-height: 0;
+  margin-left: 2rem;
+}
+
+i {
+  color: black;
 }

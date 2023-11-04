@@ -1,23 +1,23 @@
 import React from "react";
-import { inputUrl, inputJson, formattedJson } from "../signals";
+import { inputUrl, inputJson, parsedJson } from "../signals";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
 import { Toaster, toast } from "sonner";
 
-export default function Output() {
+export default function Clickable() {
   const [copiedText, copyToClipboard] = useCopyToClipboard();
   return (
     <div className="output flex flex-col gap-2 " id="output">
-      Output
+      Parsed Output
       <textarea
-        value={formattedJson.value}
+        value={parsedJson.value}
         readOnly
-        // onChange={(e) => (formattedJson.value = e.target.value)}
+        // onChange={(e) => (parsedJson.value = e.target.value)}
         name=""
         id=""
         className=" placeholder-gray-100 focus:outline-white cursor-copy"
         placeholder=""
         onClick={() => {
-          copyToClipboard(formattedJson.value);
+          copyToClipboard(parsedJson.value);
           console.log("copied");
           toast.info("Copied Formatted Json");
         }}
@@ -25,7 +25,7 @@ export default function Output() {
       <div className="flex flex-row gap-2 justify-end">
         <button
           onClick={() => {
-            copyToClipboard(formattedJson.value);
+            copyToClipboard(parsedJson.value);
             console.log("copied");
             toast.info("Copied Formatted Json");
           }}

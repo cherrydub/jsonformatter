@@ -22,7 +22,7 @@
 }
 
 * {
-  color: rgba(255, 255, 255, 0.87);
+  /* color: rgba(255, 255, 255, 0.87); */
 }
 
 html {
@@ -31,7 +31,7 @@ html {
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   display: flex;
   /* place-items: center; */
   min-height: 100vh;
@@ -94,11 +94,18 @@ button:focus-visible {
 
 textarea {
   opacity: 0.9;
+  font-family: monospace, "Courier New", Courier;
+  color: rgba(0, 0, 0, 1);
+  font-size: 0.6rem;
   background: var(--input-background);
   border: none;
   padding: 10px;
   height: 200px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.input textarea {
+  color: white;
 }
 
 textarea::placeholder {

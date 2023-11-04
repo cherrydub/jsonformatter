@@ -1,0 +1,105 @@
+.close-button {
+  color: white;
+  text-align: right;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.output-divs {
+  text-align: left;
+  background-color: var(--output-divs-background);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px dotted var(--output-divs-border);
+  border-radius: 5px;
+}
+
+button {
+  font-size: 0.7rem;
+}
+
+.buttons-1 {
+  display: flex;
+  /* padding-left: 10px; */
+}
+
+.key-text {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.collapse-button {
+  border: 1px solid transparent;
+}
+
+.collapse-button:hover {
+  border: 1px solid black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.white-background {
+  background-color: transparent;
+  cursor: default !important;
+  border: 1px solid transparent !important;
+  color: transparent;
+}
+
+.white-background:hover {
+  background-color: transparent;
+}
+
+.clickable_keys {
+  padding: 0px;
+  border: 1px dotted black;
+  border-radius: 5px;
+  line-height: 0.9em;
+}
+
+.clickable_keys:hover {
+  color: black;
+  cursor: pointer;
+  background-color: white !important;
+  border: 1px dotted black;
+  transition: 0.5s;
+}
+
+.collapsed:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.clickable_keys:hover .value {
+  display: inline !important;
+  font-size: 0.7rem !important;
+  font-weight: none !important;
+}
+
+#pre-path-area {
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 85vw;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#pre-path-area:hover {
+  cursor: pointer;
+}
+
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
+}

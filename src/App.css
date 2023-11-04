@@ -51,9 +51,15 @@
 .input,
 .output {
   width: 500px;
+
   @media (width < 600px) {
     width: 90vw;
   }
+}
+
+.output,
+.info {
+  padding-top: 50px;
 }
 
 .footer {

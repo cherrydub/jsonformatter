@@ -78,3 +78,8 @@
 .footer i:hover {
   opacity: 1;
 }
+
+.input i,
+.output i {
+  color: white;
+}

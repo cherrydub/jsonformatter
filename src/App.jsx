@@ -19,7 +19,7 @@ function App() {
         <Input />
         {parsedJson.value && <Output />}
         {/* <Info /> */}
-        {/* <Clickable /> */}
+        <Clickable />
 
         {/* <Footer /> */}
       </div>

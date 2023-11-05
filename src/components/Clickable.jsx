@@ -6,6 +6,18 @@ import ClickableComponent from "./ClickableComponent";
 import Modal from "react-modal";
 import "../extra.css";
 
+const colorArr = [
+  "#ffadad",
+  "#ffd6a5",
+  "#fdffb6",
+  "#caffbf",
+  "#9bf6ff",
+  "#a0c4ff",
+  "#bdb2ff",
+  "#ffc6ff",
+  "#fffffc",
+];
+
 export default function Clickable({
   jsonData = formattedJson.value,
   isFormatted = true,
@@ -61,7 +73,6 @@ export default function Clickable({
         }
       }
     };
-
     setCollapseRecursively(JSON.parse(jsonData));
     setCollapsedKeys(newCollapsedKeys);
   };
@@ -74,43 +85,37 @@ export default function Clickable({
     });
   };
 
+  //this is the style 1 list with no background stuff🔑
   const renderStyle1Keys = (obj, depth = 1, path = []) => {
-    const colorArr = [
-      "#ffadad",
-      "#ffd6a5",
-      "#fdffb6",
-      "#caffbf",
-      "#9bf6ff",
-      "#a0c4ff",
-      "#bdb2ff",
-      "#ffc6ff",
-      "#fffffc",
-    ];
-
     const backgroundColor = colorArr[(depth - 1) % colorArr.length];
-
     return (
       <ul
-        className="clickable-list"
-        style={{
-          listStyleType: "none",
-          // marginLeft: "-15px",
-        }}
+        className="first-ul"
+        style={
+          {
+            // listStyleType: "none",
+            // marginLeft: "-15px",
+          }
+        }
       >
         {Object.keys(obj).map((key, index) => (
           <li
+            className="first-li"
             title="Click to copy path"
             key={key + index}
-            style={{
-              fontWeight: "bold",
-              fontSize: "1rem",
-            }}
+            style={
+              {
+                // fontWeight: "bold",
+                // fontSize: "1rem",
+              }
+            }
           >
             <div style={{ whiteSpace: "nowrap" }} className="">
               <button
-                style={{}}
                 className={`collapse-button ${
-                  typeof obj[key] !== "object" ? "white-background" : ""
+                  typeof obj[key] !== "object"
+                    ? "white-background"
+                    : "exp-button"
                 }`}
                 onClick={() => toggleKeyCollapse([...path, key].join("."))}
               >
@@ -121,7 +126,7 @@ export default function Clickable({
                   : "-"}
               </button>
               <span
-                className={`clickable_keys ${
+                className={`clickable-keys ${
                   collapsedKeys[[...path, key].join(".")] ? "collapsed" : ""
                 }`}
                 style={{
@@ -134,11 +139,7 @@ export default function Clickable({
                   <>{"🔑" + key}:</>
                 ) : (
                   <>
-                    <img
-                      src="https://www.svgrepo.com/show/532318/key.svg"
-                      alt=""
-                      height={"10px"}
-                    />
+                    <i class="las la-key"></i>
                     {key}:
                   </>
                 )}
@@ -159,37 +160,26 @@ export default function Clickable({
     );
   };
 
+  //this is with the colored background
   const renderStyle2Keys = (obj, depth = 1, path = []) => {
-    const colorArr = [
-      "#ffadad",
-      "#ffd6a5",
-      "#fdffb6",
-      "#caffbf",
-      "#9bf6ff",
-      "#a0c4ff",
-      "#bdb2ff",
-      "#ffc6ff",
-      "#fffffc",
-    ];
-
     const backgroundColor = colorArr[(depth - 1) % colorArr.length];
 
     return (
       <ul
-        className=""
-        style={{
-          listStyleType: "none",
-          // marginLeft: "-15px",
-        }}
+        className="second-ul"
+        style={
+          {
+            // listStyleType: "none",
+            // marginLeft: "-15px",
+          }
+        }
       >
         {Object.keys(obj).map((key, index) => (
           <li
-            className=""
+            className="second-li"
             title="Click to copy path"
             key={key + index}
             style={{
-              fontWeight: "bold",
-              fontSize: "0.8rem",
               backgroundColor: collapsedKeys[[...path, key].join(".")]
                 ? "transparent"
                 : backgroundColor, // Make collapsed keys transparent
@@ -197,14 +187,10 @@ export default function Clickable({
           >
             <div style={{ whiteSpace: "nowrap" }} className="">
               <button
-                style={
-                  {
-                    // marginLeft: "-2.3rem",
-                    // border: "none",
-                  }
-                }
                 className={`collapse-button ${
-                  typeof obj[key] !== "object" ? "white-background" : ""
+                  typeof obj[key] !== "object"
+                    ? "white-background"
+                    : "exp-button"
                 }`}
                 onClick={() => toggleKeyCollapse([...path, key].join("."))}
               >
@@ -215,7 +201,7 @@ export default function Clickable({
                   : "-"}
               </button>
               <span
-                className={`clickable_keys ${
+                className={`clickable-keys ${
                   collapsedKeys[[...path, key].join(".")] ? "collapsed" : ""
                 }`}
                 style={{
@@ -228,11 +214,7 @@ export default function Clickable({
                   <>{"🔑" + key}:</>
                 ) : (
                   <>
-                    <img
-                      src="https://www.svgrepo.com/show/532318/key.svg"
-                      alt=""
-                      height={"10px"}
-                    />
+                    <i class="las la-key"></i>
                     {key}:
                   </>
                 )}
@@ -259,9 +241,6 @@ export default function Clickable({
       <div
         style={{
           textAlign: "right",
-          paddingTop: "15px",
-
-          paddingRight: "15px",
         }}
       >
         <button className="close-button" onClick={closeModal}>
@@ -285,9 +264,6 @@ export default function Clickable({
       <div
         style={{
           textAlign: "right",
-          paddingTop: "25px",
-          paddingBottom: "15px",
-          paddingRight: "15px",
         }}
       >
         <button className="close-button" onClick={closeModal}>
@@ -299,26 +275,16 @@ export default function Clickable({
     </div>
   );
 
+  //this is the outside element that you actually see, starting with title, buttons and then the div
   return (
     <div>
-      <h2 className="comp-titles">
-        {collapsed ? (
-          <p className="collapsed" onClick={() => setCollapsed(!collapsed)}>
-            {"- Clickable Keys"}
-          </p>
-        ) : (
-          <p className="collapsed" onClick={() => setCollapsed(!collapsed)}>
-            {"+ Clickable Keys"}
-          </p>
-        )}
-      </h2>
-
-      <div className="body-clickable-keys">
-        {collapsed && jsonData && isFormatted && (
+      <h2 className="comp-titles">Clickable Keys</h2>
+      <div className="clickable body-clickable-keys">
+        {jsonData && (
           <div>
             <div
-              className="buttons-1"
-              style={{ marginBottom: "5px", marginTop: "5px" }}
+              className="list-buttons"
+              // style={{ marginBottom: "5px", marginTop: "5px" }}
             >
               <button className="" onClick={() => toggleAllKeys(false)}>
                 {"Expand All"}
@@ -333,24 +299,16 @@ export default function Clickable({
                 title="Click to switch key style"
                 onClick={() => setObjKey(!objKey)}
               >
-                {objKey ? (
-                  "🔑"
-                ) : (
-                  <img
-                    src="https://www.svgrepo.com/show/532318/key.svg"
-                    alt=""
-                    height={"12px"}
-                  />
-                )}
+                {objKey ? "🔑" : <i class="las la-key"></i>}
               </button>
             </div>
             <div
               className="output-divs"
               style={{
-                padding: "10px",
-                maxHeight: "500px",
+                // padding: "10px",
+                height: "500px",
                 // maxWidth: "20vw",
-                width: "auto",
+                // width: "auto",
                 overflowY: "auto",
                 overflowX: "auto",
                 // position: "relative",
@@ -375,7 +333,8 @@ export default function Clickable({
             </div>
           </div>
         )}
-        {collapsed && jsonData && isFormatted && pushedWords && (
+
+        {jsonData && pushedWords && (
           <div style={{ color: "var(--text)", paddingBottom: "10px" }}>
             Path:
             <br />
@@ -390,7 +349,6 @@ export default function Clickable({
           </div>
         )}
 
-        {/* Render the modalContent inside the Modal */}
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -399,7 +357,6 @@ export default function Clickable({
         >
           {modalContent}
         </Modal>
-        {/* Button to toggle between styles */}
       </div>
     </div>
   );

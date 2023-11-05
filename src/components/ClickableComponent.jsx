@@ -7,7 +7,7 @@ export default function ClickableComponent({
   style1,
 }) {
   return (
-    <div className="" style={{ height: "500px" }}>
+    <div className="">
       {Object.keys(JSON.parse(jsonData)).length > 0 ? (
         <>
           {style1

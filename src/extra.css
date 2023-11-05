@@ -21,10 +21,6 @@
   box-shadow: none;
 }
 
-button {
-  /* font-size: 0.7rem; */
-}
-
 .buttons-1 {
   /* display: flex; */
   /* padding-left: 10px; */
@@ -50,25 +46,15 @@ button {
 .collapse-button button {
 }
 
-.collapse-button:hover {
+.collapse-button button:hover {
   /* border: 1px solid black; */
-  cursor: crosshair;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid red;
   /* font-weight: bold; */
 }
 
-.white-background {
-  background-color: transparent;
-  cursor: default !important;
-  outline: none;
-
-  color: black;
-}
-
-.white-background:hover {
-  background-color: transparent;
-}
-
-.clickable_keys {
+.clickable-keys {
   padding: 0px;
   /* border: 1px solid black; */
   /* border-radius: 5px; */
@@ -76,7 +62,7 @@ button {
   color: black;
 }
 
-.clickable_keys:hover {
+.clickable-keys:hover {
   color: black;
   cursor: pointer;
   /* background-color: white !important; */
@@ -90,7 +76,7 @@ button {
   color: black;
 }
 
-.clickable_keys:hover .value {
+.clickable-keys:hover .value {
   display: inline !important;
   /* font-size: 0.7rem !important; */
   font-weight: none !important;
@@ -130,8 +116,45 @@ ul {
 li {
   line-height: 0;
   margin-left: 2rem;
+  font-size: 0.7rem;
 }
 
 i {
   color: black;
+}
+
+.first-ul button,
+.second-ul button {
+  /* width: 10px; */
+  height: 10px;
+  padding: 0 15px;
+}
+
+.first-ul button:hover,
+.second-ul button:hover {
+  background-color: white;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.white-background button:hover {
+}
+
+.white-background {
+  background-color: transparent;
+  cursor: default !important;
+  color: transparent;
+}
+
+.white-background:hover {
+  background-color: none;
+}
+
+.exp-button {
+  /* background-color: red; */
+}
+
+.white-background button:hover {
 }

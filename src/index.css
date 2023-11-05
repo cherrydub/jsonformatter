@@ -58,7 +58,9 @@ button:active {
   box-shadow: none;
 }
 
-button {
+.input button,
+.output button,
+.list-buttons button {
   /* border-radius: 8px; */
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -71,7 +73,9 @@ button {
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-button:hover {
+.input button:hover,
+.output button:hover,
+.list-buttons button:hover {
   border: 1px solid var(--primary-text);
   background-color: var(--primary-text);
   color: var(--main-background);
@@ -107,6 +111,8 @@ textarea::placeholder {
   color: var(--primary-text);
 }
 
-.input button {
+.input button,
+.output button,
+.clickable button {
   font-size: 0.8rem;
 }

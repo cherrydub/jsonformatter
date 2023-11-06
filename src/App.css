@@ -59,7 +59,7 @@
 }
 
 .output,
-.info {
+.clickable {
   padding-top: 50px;
 }
 
@@ -83,4 +83,8 @@
 .input i,
 .output i {
   color: white;
+}
+
+.clickable {
+  padding-bottom: 50px;
 }

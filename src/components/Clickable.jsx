@@ -18,11 +18,7 @@ const colorArr = [
   "#fffffc",
 ];
 
-export default function Clickable({
-  jsonData = formattedJson.value,
-  isFormatted = true,
-  renderFormattedKeys,
-}) {
+export default function Clickable({ jsonData = formattedJson.value }) {
   Modal.setAppElement("#root");
   const [pushedWords, setPushedWords] = useState([]);
   const [collapsed, setCollapsed] = useState(true);
@@ -78,9 +74,15 @@ export default function Clickable({
   };
 
   const handleKeyClick = (key) => {
-    toast.success(`Copied path: ${key} to clipboard :)`);
-    setPushedWords(key);
-    navigator.clipboard.writeText(key).catch((error) => {
+    const formattedKey = key.replace(
+      /\.\d+/g,
+      (match) => `[${match.slice(1)}]`
+    );
+
+    toast.success(`Copied path: ${formattedKey} to clipboard :)`);
+    setPushedWords(formattedKey);
+
+    navigator.clipboard.writeText(formattedKey).catch((error) => {
       console.error(`Error copying to clipboard: ${error}`);
     });
   };
@@ -278,8 +280,8 @@ export default function Clickable({
   //this is the outside element that you actually see, starting with title, buttons and then the div
   return (
     <div>
-      <h2 className="comp-titles">Clickable Keys</h2>
       <div className="clickable body-clickable-keys">
+        <h2 className="comp-titles">Clickable Keys</h2>
         {jsonData && (
           <div>
             <div
@@ -334,7 +336,7 @@ export default function Clickable({
           </div>
         )}
 
-        {jsonData && pushedWords && (
+        {pushedWords.length > 0 && (
           <div style={{ color: "var(--text)", paddingBottom: "10px" }}>
             Path:
             <br />

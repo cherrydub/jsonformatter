@@ -6,8 +6,7 @@ import Output from "./components/Output";
 import Header from "./components/Header";
 
 import { inputUrl, inputJson, formattedJson, parsedJson } from "./signals";
-import Footer from "./components/Footer";
-import Info from "./components/Info";
+
 import Clickable from "./components/Clickable";
 
 function App() {

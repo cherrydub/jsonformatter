@@ -60,7 +60,8 @@ button:active {
 
 .input button,
 .output button,
-.list-buttons button {
+.list-buttons button,
+.header button {
   /* border-radius: 8px; */
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -75,7 +76,8 @@ button:active {
 
 .input button:hover,
 .output button:hover,
-.list-buttons button:hover {
+.list-buttons button:hover,
+.header button:hover {
   border: 1px solid var(--primary-text);
   background-color: var(--primary-text);
   color: var(--main-background);
@@ -113,6 +115,7 @@ textarea::placeholder {
 
 .input button,
 .output button,
-.clickable button {
+.clickable button,
+.header button {
   font-size: 0.8rem;
 }

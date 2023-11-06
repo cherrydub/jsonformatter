@@ -9,7 +9,7 @@
 
 .output-divs {
   text-align: left;
-  background-color: transparent;
+  background: var(--input-background);
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: none;

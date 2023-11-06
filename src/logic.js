@@ -81,7 +81,7 @@ export const formatJson = () => {
     // console.log("input:", inputJson.value);
     // console.log("formatted:", formattedJson.value);
     // console.log("parsed:", parsedJson.value);
-    inputUrl.value = "";
-    inputJson.value = "";
+    // inputUrl.value = "";
+    // inputJson.value = "";
   }
 };

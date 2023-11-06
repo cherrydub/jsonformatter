@@ -38,8 +38,8 @@ export default function Clickable({
       zIndex: 1000,
     },
     content: {
-      maxWidth: "100%",
-      maxHeight: "100%",
+      width: "100vw",
+      height: "100vh",
       margin: "auto",
       background: "transparent", // Add this line to set the background to transparent
       border: "none", // Remove the border

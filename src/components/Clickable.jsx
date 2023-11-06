@@ -91,27 +91,9 @@ export default function Clickable({ jsonData = formattedJson.value }) {
   const renderStyle1Keys = (obj, depth = 1, path = []) => {
     const backgroundColor = colorArr[(depth - 1) % colorArr.length];
     return (
-      <ul
-        className="first-ul"
-        style={
-          {
-            // listStyleType: "none",
-            // marginLeft: "-15px",
-          }
-        }
-      >
+      <ul className="first-ul">
         {Object.keys(obj).map((key, index) => (
-          <li
-            className="first-li"
-            title="Click to copy path"
-            key={key + index}
-            style={
-              {
-                // fontWeight: "bold",
-                // fontSize: "1rem",
-              }
-            }
-          >
+          <li className="first-li" title="Click to copy path" key={key + index}>
             <div style={{ whiteSpace: "nowrap" }} className="">
               <button
                 className={`collapse-button ${
@@ -167,15 +149,7 @@ export default function Clickable({ jsonData = formattedJson.value }) {
     const backgroundColor = colorArr[(depth - 1) % colorArr.length];
 
     return (
-      <ul
-        className="second-ul"
-        style={
-          {
-            // listStyleType: "none",
-            // marginLeft: "-15px",
-          }
-        }
-      >
+      <ul className="second-ul">
         {Object.keys(obj).map((key, index) => (
           <li
             className="second-li"
@@ -307,16 +281,12 @@ export default function Clickable({ jsonData = formattedJson.value }) {
             <div
               className="output-divs"
               style={{
-                // padding: "10px",
                 height: "500px",
-                // maxWidth: "20vw",
-                // width: "auto",
                 overflowY: "auto",
                 overflowX: "auto",
-                // position: "relative",
               }}
             >
-              <button
+              {/* <button
                 onClick={openModal}
                 style={{
                   position: "sticky", // Change to sticky
@@ -325,7 +295,7 @@ export default function Clickable({ jsonData = formattedJson.value }) {
                 }}
               >
                 Maximize Window
-              </button>
+              </button> */}
               <ClickableComponent
                 jsonData={jsonData}
                 renderStyle1Keys={renderStyle1Keys}

@@ -105,8 +105,6 @@ const handleExtractUrl = async () => {
   const response = await fetch(inputUrl.value);
   const data = await response.json();
 
-  console.log("data here:", typeof data, data);
-
   const stringedData = JSON.stringify(data);
   inputJson.value = stringedData;
 };
@@ -124,7 +122,6 @@ const handlePasteUrl = async () => {
         url = "https://" + url;
       }
     }
-
     inputUrl.value = url;
     toast.info("Pasted clipboard content into URL input");
 
@@ -134,8 +131,8 @@ const handlePasteUrl = async () => {
       setTimeout(() => {
         formatJson();
         toast.info("Formatting JSON");
-      }, 3000);
-    }, 3000);
+      }, 2000);
+    }, 2000);
   } catch (error) {
     console.error("Error pasting URL from clipboard:", error);
     toast.error("Error pasting URL from clipboard", toastObj);

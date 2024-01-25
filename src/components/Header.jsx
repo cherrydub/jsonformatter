@@ -1,6 +1,21 @@
 import React from "react";
 
+import {
+  inputUrl,
+  inputJson,
+  formattedJson,
+  parsedJson,
+  howToStarted,
+} from "../signals";
+import { handlePasteUrl } from "./Input";
+
 export default function Header() {
+  function onHowTo() {
+    howToStarted.value = true;
+    console.log("turned on how to", howToStarted.value);
+    handlePasteUrl();
+  }
+
   return (
     <div className="header fixed top-0 left-0 w-full flex ">
       <div className="">
@@ -18,7 +33,9 @@ export default function Header() {
         </h1>
       </div>
       <div className="">
-        <button className="btn">how to use?</button>
+        <button onClick={onHowTo} className="btn">
+          how to use?
+        </button>
       </div>
     </div>
   );

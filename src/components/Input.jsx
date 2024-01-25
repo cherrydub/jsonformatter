@@ -1,8 +1,17 @@
 import React, { useEffect } from "react";
-import { inputUrl, inputJson, formattedJson, parsedJson } from "../signals";
+import {
+  inputUrl,
+  inputJson,
+  formattedJson,
+  parsedJson,
+  howToStarted,
+} from "../signals";
 
 import { Toaster, toast } from "sonner";
 
+if (howToStarted.value) {
+  console.log("ldjflsdlfj");
+}
 function formatJson() {
   formattedJson.value = undefined;
 
@@ -109,8 +118,23 @@ const handleExtractUrl = async () => {
   inputJson.value = stringedData;
 };
 
-const handlePasteUrl = async () => {
+export const handlePasteUrl = async () => {
   try {
+    if (howToStarted.value) {
+      console.log("ye its TRUE");
+      inputUrl.value = "https://ergast.com/api/f1/2004/1/results.json";
+      toast.info("Pasted clipboard content into URL input");
+
+      setTimeout(() => {
+        handleExtractUrl();
+        toast.info("Extracting URL");
+        setTimeout(() => {
+          toast.info("Formatting JSON");
+          formatJson();
+        }, 2000);
+      }, 2000);
+      return;
+    }
     const clipboardText = await navigator.clipboard.readText();
     let url = clipboardText;
 
@@ -129,13 +153,16 @@ const handlePasteUrl = async () => {
       handleExtractUrl();
       toast.info("Extracting URL");
       setTimeout(() => {
-        formatJson();
         toast.info("Formatting JSON");
+        formatJson();
       }, 2000);
     }, 2000);
   } catch (error) {
     console.error("Error pasting URL from clipboard:", error);
     toast.error("Error pasting URL from clipboard", toastObj);
+  } finally {
+    howToStarted.value = false;
+    console.log("howtoStated value:", howToStarted.value);
   }
 };
 

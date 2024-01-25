@@ -5,7 +5,13 @@ import Input from "./components/Input";
 import Output from "./components/Output";
 import Header from "./components/Header";
 
-import { inputUrl, inputJson, formattedJson, parsedJson } from "./signals";
+import {
+  inputUrl,
+  inputJson,
+  formattedJson,
+  parsedJson,
+  howToStarted,
+} from "./signals";
 
 import Clickable from "./components/Clickable";
 
